@@ -13,16 +13,16 @@ class CarType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('price')->add('year')->add('navigation')->add('description')->add('model')->add('make')        ;
+        $builder->add('price')->add('year')->add('navigation')->add('description')->add('model')->add('make');
     }
-    
+
     /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'CarBundle\Entity\Car'
+            'data_class' => 'CarBundle\Entity\Car',
         ));
     }
 
@@ -33,6 +33,5 @@ class CarType extends AbstractType
     {
         return 'carbundle_car';
     }
-
 
 }
