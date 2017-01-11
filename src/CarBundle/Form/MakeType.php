@@ -13,16 +13,16 @@ class MakeType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')        ;
+        $builder->add('name');
     }
-    
+
     /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'CarBundle\Entity\Make'
+            'data_class' => 'CarBundle\Entity\Make',
         ));
     }
 
@@ -33,6 +33,5 @@ class MakeType extends AbstractType
     {
         return 'carbundle_make';
     }
-
 
 }
